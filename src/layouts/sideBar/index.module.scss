@@ -1,7 +1,132 @@
 .sideBar {
-  width: 250px;
+  width: max(350px, 30%);
   height: 100%;
-  background-color: #222;
-  color: white;
-  padding: 1rem;
+  padding: 2.5rem;
+  background-color: #eee;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 150px;
+  border-right: 10px black solid;
+  border-radius: 10px 0 0 10px;
+
+  .imgBox {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .fullName {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    white-space: normal;
+    word-break: break-word;
+
+    @media screen and (width <= 576px) {
+      font-size: 1.2rem;
+    }
+
+    .name {
+      color: #3452ff;
+      white-space: normal;
+      word-break: keep-all;
+    }
+  }
+
+  .summary {
+    border-left: 3px solid rgb(52 82 255);
+    padding: 8px 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 30px;
+
+    .link {
+      position: relative;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: #333;
+      transition: 0.3s;
+    }
+
+    .link:hover::after {
+      width: 100%;
+    }
+  }
+
+  .contactBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #555;
+      font-size: 1rem;
+
+      .icon {
+        color: #3452ff;
+      }
+
+      span {
+        word-break: break-all;
+        white-space: normal;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .linkBox {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .link {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #555;
+      font-size: 1.5rem;
+      border-radius: 5%;
+      transition: 0.3s;
+      outline: 2px solid transparent;
+      transition: 0.4s;
+
+      .linkIcon {
+        font-size: 1.4rem;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 5%;
+        transition: 0.6s;
+      }
+
+      &:hover {
+        color: #000;
+        outline: 2px solid #000;
+        outline-offset: 3px;
+
+        .linkIcon {
+          outline: 2px solid transparent;
+          outline-offset: 10px;
+        }
+      }
+    }
+  }
 }
