@@ -7,6 +7,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function HomeSideBar() {
   return (
@@ -56,6 +57,10 @@ function HomeSideBar() {
 
         <a className={style.link} href="https://www.instagram.com/memmedtaghi8/" target="_blank" rel="noopener noreferrer">
           <InstagramIcon className={style.linkIcon} />
+        </a>
+
+        <a className={style.link} href="https://github.com/Fevine" target="_blank" rel="noopener noreferrer">
+          <GitHubIcon className={style.linkIcon} />
         </a>
       </div>
     </div>
