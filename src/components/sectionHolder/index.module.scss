@@ -1,0 +1,30 @@
+.sectionHolder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #eee;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 15px;
+
+  .title {
+    width: fit-content;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+
+    &::before {
+      position: absolute;
+      bottom: -10px;
+      content: "";
+      width: calc(100% - 1.5rem);
+      height: 4px;
+      background-color: #3452ff;
+      margin-top: 0.5rem;
+      border-radius: 2px;
+    }
+  }
+}

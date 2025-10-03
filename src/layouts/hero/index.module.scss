@@ -7,18 +7,23 @@
   padding: 20rem 2rem;
   border-radius: 10px;
   background-color: #eee;
-  box-shadow:
-    rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 10px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px,
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 15px;
+
+  @media screen and (width <= 1200px) {
+    flex-direction: column;
+    padding: 10rem 2rem;
+    row-gap: 2rem;
+  }
 
   .imgBox {
-    width: 15rem;
+    width: max(15rem, 50%);
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
+
+    @media screen and (width <= 1200px) {
+      width: max(10rem, 100%);
+    }
 
     img {
       height: 100%;
@@ -33,21 +38,38 @@
     flex-direction: column;
     row-gap: 1rem;
 
+    @media screen and (width <= 1200px) {
+      width: 100%;
+      text-align: center;
+    }
+
     .subtitle {
       font-size: 2.25rem;
       font-weight: 400;
       color: #555;
+
+      @media screen and (width <= 576px) {
+        font-size: 1.75rem;
+      }
     }
 
     .title {
       width: fit-content;
       position: relative;
 
+      @media screen and (width <= 1200px) {
+        margin-inline: auto;
+      }
+
       &::before {
         content: "Front-end";
         color: #111;
         font-size: 64px;
         animation: words 20s infinite;
+
+        @media screen and (width <= 576px) {
+          font-size: 42px;
+        }
       }
 
       &::after {
