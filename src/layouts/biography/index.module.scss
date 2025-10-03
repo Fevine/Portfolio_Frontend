@@ -1,0 +1,17 @@
+.biography {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  .text {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #4b5563;
+  }
+
+  .bioBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}

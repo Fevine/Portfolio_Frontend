@@ -22,7 +22,9 @@ function HomeSideBar() {
       </h2>
 
       <p className={style.summary}>
-        <span>I'm a passionate front-end web developer who excels at creating pixel-perfect web interfaces. I’m available for a freelance job. </span>
+        <span>
+          I'm a passionate full-stack and mobile developer who excels at building seamless user interfaces, robust backend systems, and high-quality mobile applications. I create efficient, scalable, and well-structured solutions from end to end, and I’m available for freelance opportunities.
+        </span>
         <a className={style.link} href="#contact">Hire me</a>
       </p>
 

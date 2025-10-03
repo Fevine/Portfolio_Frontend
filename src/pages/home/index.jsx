@@ -3,6 +3,7 @@ import style from "./index.module.scss"
 import HomeSideBar from '../../layouts/sideBar'
 import Hero from '../../layouts/hero'
 import SectionHolder from '../../components/sectionHolder'
+import Biography from '../../layouts/biography'
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
       <div className={style.content}>
         <Hero />
         <SectionHolder title="Biography" >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, maxime?
+          <Biography />
         </SectionHolder>
       </div>
     </div>
