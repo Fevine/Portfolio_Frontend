@@ -6,6 +6,7 @@ import SectionHolder from '../../components/sectionHolder'
 import Biography from '../../layouts/biography'
 import ExCard from '../../components/exCard'
 import Contact from '../../layouts/contact'
+import SkillsSection from '../../layouts/skills'
 
 function Home() {
   return (
@@ -13,9 +14,14 @@ function Home() {
       <HomeSideBar />
       <div className={style.content}>
         <Hero />
+
+        {/* Biography Section */}
         <SectionHolder title="Biography" >
           <Biography />
         </SectionHolder>
+        {/* Biography Section */}
+
+        {/* Experience Section */}
         <SectionHolder title="Experience" >
           <ExCard
             role={"Front-end Developer"}
@@ -25,8 +31,15 @@ function Home() {
             Worked on developing and maintaining the user interface of web applications using HTML, CSS, and JavaScript. Collaborated with designers to implement responsive designs and ensure cross-browser compatibility.
           </ExCard>
         </SectionHolder>
+        {/* Experience Section */}
+
+        {/* Skills Section */}
         <SectionHolder title="Skills" >
+          <SkillsSection />
         </SectionHolder>
+        {/* Skills Section */}
+
+        {/* Education Section */}
         <SectionHolder title="Education" >
           <ExCard
             role={"Master of Science in Cybersecurity"}
@@ -43,9 +56,13 @@ function Home() {
             Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management, Software Engineering.
           </ExCard>
         </SectionHolder>
+        {/* Education Section */}
+
+        {/* Contact Section */}
         <SectionHolder title="Contact" >
           <Contact />
         </SectionHolder>
+        {/* Contact Section */}
       </div>
     </div>
   )

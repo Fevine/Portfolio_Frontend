@@ -32,6 +32,16 @@
     border-radius: 3px;
   }
 
+  .sendBtn {
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    color: #333;
+    background-color: #aaa;
+    border: none;
+  }
+
   // Phone responsiveness
 
   @media screen and (width <= 576px) {
