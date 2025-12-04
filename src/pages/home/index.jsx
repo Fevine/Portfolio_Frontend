@@ -28,7 +28,7 @@ function Home() {
             organization={"NMRHIS"}
             period={"Sep 2024 - Jan 2024"}
           >
-            Worked on developing and maintaining the user interface of web applications using HTML, CSS, and JavaScript. Collaborated with designers to implement responsive designs and ensure cross-browser compatibility.
+            Worked on developing and maintaining the user interface of web applications using React. Collaborated with designers to implement responsive designs and ensure cross-browser compatibility.
           </ExCard>
         </SectionHolder>
         {/* Experience Section */}
