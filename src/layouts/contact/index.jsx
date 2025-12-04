@@ -20,7 +20,6 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add your submit logic here (e.g., send data to API)
     console.log("Submitted:", MessageData);
   };
 
