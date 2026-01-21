@@ -8,6 +8,10 @@
   background-color: #eee;
   box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 15px;
 
+  @media screen and (width <= 768px) {
+    gap: 2rem;
+  }
+
   .title {
     width: fit-content;
     text-transform: uppercase;
@@ -15,6 +19,10 @@
     font-size: 1.8rem;
     font-weight: 500;
     color: #333;
+
+    @media screen and (width <= 768px) {
+      font-size: 1.2rem;
+    }
 
     &::before {
       position: absolute;
@@ -25,6 +33,14 @@
       background-color: #3452ff;
       margin-top: 0.5rem;
       border-radius: 2px;
+
+      @media screen and (width <= 768px) {
+        bottom: -6px;
+        width: calc(100% - 1.5rem);
+        height: 1.5px;
+        margin-top: 0.5rem;
+        border-radius: 4px;
+      }
     }
   }
 }

@@ -3,7 +3,6 @@
   flex-wrap: wrap;
 
   .skillBlock {
-    cursor: pointer;
     user-select: none;
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -13,6 +12,10 @@
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+
+    @media screen and (width <= 768px) {
+      font-size: 1rem;
+    }
 
     &:hover {
       color: #f0f0f0;

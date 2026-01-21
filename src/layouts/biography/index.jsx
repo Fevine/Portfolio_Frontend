@@ -10,15 +10,15 @@ function Biography() {
       </p>
 
       <div className={style.bioBox}>
-        <BioItem title="Name" content="Mammadtaghi Aliyev" />
+        <BioItem title="Full Name" content="Mammadtaghi Aliyev" />
         <BioItem title="Birthday" content="May 4, 2004" />
         <BioItem title="Age" content="21 years" />
         <BioItem title="Languages" content="Azerbaijani English Turkish" />
         <BioItem title="Nationality" content="Azerbaijani" />
         <BioItem title="Adress" content="Baku, Azerbaijan" />
-        <BioItem title="Phone" content="(+994) 55 990 2853" />
-        <BioItem title="Email" content="mammadtaghialiyev@gmail.com" />
-        <BioItem title="Telegram" content="@mammadtaghi" />
+        <BioItem title="Phone" content="(+994) 55 990 2853" link={"tel:+994559902853"} />
+        <BioItem title="Email" content="mammadtaghialiyev@gmail.com" link={"mailto:mammadtaghialiyev@gmail.com"} />
+        <BioItem title="Telegram" content="@mammadtaghi" link={"https://t.me/mammadtaghi"} />
       </div>
     </div>
   )

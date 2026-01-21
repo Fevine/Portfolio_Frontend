@@ -7,11 +7,20 @@
     font-size: 1.25rem;
     line-height: 2rem;
     color: #4b5563;
+
+    @media screen and (width <= 768px) {
+      font-size: 1rem;
+      line-height: 1.7rem;
+    }
   }
 
   .bioBox {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem 3rem;
+
+    @media screen and (width <= 768px) {
+      gap: 1rem;
+    }
   }
 }

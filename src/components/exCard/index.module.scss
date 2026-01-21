@@ -33,6 +33,12 @@
       font-size: 0.9rem;
       color: #666;
     }
+
+    @media screen and (width <= 768px) {
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: start;
+    }
   }
 
   .role {
