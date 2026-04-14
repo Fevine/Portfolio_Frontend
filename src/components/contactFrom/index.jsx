@@ -1,14 +1,17 @@
-import React from 'react'
-import style from "./index.module.scss"
+import React from 'react';
+import emailjs from '@emailjs/browser';
+import style from "./index.module.scss";
 
 function ContactForm() {
-
   const [MessageData, setMessageData] = React.useState({
     name: "",
     email: "",
     phone: "",
     message: ""
-  })
+  });
+
+  const [isSending, setIsSending] = React.useState(false);
+  const [feedback, setFeedback] = React.useState({ type: '', message: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,13 +21,44 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted:", MessageData);
+    setIsSending(true);
+    setFeedback({ type: '', message: '' });
+
+    try {
+      // Replace with your EmailJS credentials
+      const result = await emailjs.send(
+        process.env.SERVICE_ID_EMAILJS,
+        process.env.TEMPLATE_ID_EMAILJS,
+        {
+          from_name: MessageData.name,
+          from_email: MessageData.email,
+          phone: MessageData.phone || 'Not provided',
+          message: MessageData.message,
+          to_email: 'mammadtaghialiyev@gmail.com'
+        },
+        process.env.PUBLIC_KEY_EMAILJS
+      );
+
+      setFeedback({ type: 'success', message: 'Message sent successfully! I\'ll get back to you soon.' });
+      setMessageData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      setFeedback({ type: 'error', message: 'Failed to send. Please try again or contact directly.' });
+      console.error('EmailJS error:', error);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
     <>
+      {feedback.message && (
+        <div className={feedback.type === 'success' ? style.successMsg : style.errorMsg}>
+          {feedback.message}
+        </div>
+      )}
+
       <form className={style.contact} onSubmit={handleSubmit}>
         <input
           value={MessageData.name}
@@ -33,6 +67,7 @@ function ContactForm() {
           className={style.name}
           type="text"
           placeholder='Name *'
+          required
         />
         <input
           value={MessageData.email}
@@ -41,6 +76,7 @@ function ContactForm() {
           className={style.email}
           type="email"
           placeholder='Email *'
+          required
         />
         <input
           value={MessageData.phone}
@@ -57,6 +93,7 @@ function ContactForm() {
           name="message"
           placeholder='Message *'
           rows={7}
+          required
         ></textarea>
         <button
           className={style.sendBtn}
@@ -64,14 +101,15 @@ function ContactForm() {
           disabled={
             !MessageData.name.trim() ||
             !MessageData.email.trim() ||
-            !MessageData.message.trim()
+            !MessageData.message.trim() ||
+            isSending
           }
         >
-          Send Message
+          {isSending ? 'Sending...' : 'Send Message'}
         </button>
       </form>
     </>
-  )
+  );
 }
 
-export default ContactForm
+export default ContactForm;
