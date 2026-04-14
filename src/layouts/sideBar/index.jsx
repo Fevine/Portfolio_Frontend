@@ -37,12 +37,12 @@ function HomeSideBar() {
 
         <div className={style.contact}>
           <PhoneIcon className={style.icon} />
-          <span>(+994) 55 990 2853</span>
+          <a href="tel:+994559902853">(+994) 55 990 2853</a>
         </div>
 
         <div className={style.contact}>
           <EmailIcon className={style.icon} />
-          <span>mammadtaghialiyev@gmail.com</span>
+          <a href="mailto:mammadtaghialiyev@gmail.com">mammadtaghialiyev@gmail.com</a>
         </div>
 
       </div>
