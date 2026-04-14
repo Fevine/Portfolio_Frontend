@@ -1,16 +1,17 @@
 .hero {
+  max-height: 85vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 2rem;
-  padding: 20rem 2rem;
+  padding: 15rem 2rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 15px;
 
   @media screen and (width <= 1200px) {
     flex-direction: column;
-    padding: 10rem 2rem;
+    padding: 2rem 2rem;
     row-gap: 2rem;
   }
 
@@ -20,13 +21,15 @@
   }
 
   .imgBox {
-    width: max(15rem, 50%);
+    width: 50%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
 
     @media screen and (width <= 1200px) {
-      width: max(10rem, 100%);
+      --size: max(10wv, 100%);
+      width: var(--size);
+      height: var(--size);
     }
 
     img {
