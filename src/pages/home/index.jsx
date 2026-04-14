@@ -24,6 +24,23 @@ function Home() {
         {/* Experience Section */}
         <SectionHolder title="Experience" >
           <ExCard
+            url='https://fermenta-lab.com/'
+            role={"Front-end Developer"}
+            organization={"Fermenta-Lab"}
+            period={"Oct 2025 - Dec 2025"}
+          >
+            To create a multi-lingual (English, Azerbaijani, Russian), responsive frontend for a wellness brand that showcases fermented products like “Share® Original Basic Fruit” and “Share Pomelozzini®.” The site needed to communicate traditional Chinese wisdom, modern wellness, and product trust – all while being visually clean, easy to navigate, and product-focused.
+          </ExCard>
+          <ExCard
+            url='https://caspian-ps.com/'
+            role={"Front-end Developer"}
+            organization={"Caspian-PS"}
+            period={"May 2025 - July 2025"}
+          >
+            Caspian-PS is a corporate website developed for an oil and gas company to present its organizational profile, services, and industry expertise. The project focuses on delivering a clean, professional, and responsive user interface that reflects corporate identity and reliability. The frontend was built using a component-based architecture to ensure scalability, maintainability, and consistent design across all pages. Special attention was given to responsive layout, structured navigation, and performance optimization to provide a smooth user experience across multiple devices.
+          </ExCard>
+          <ExCard
+            url='https://www.nmrhis.az/'
             role={"Front-end Developer"}
             organization={"NMRHIS"}
             period={"Sep 2024 - Jan 2024"}
