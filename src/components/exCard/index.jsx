@@ -1,11 +1,19 @@
 import React from 'react'
 import style from "./index.module.scss"
 
-function ExCard({ organization, role, period, children }) {
+function ExCard({ organization, role, period, children, url = "" }) {
+
   return (
     <div className={style.exCard}>
       <div className={style.header}>
-        <h3 className={style.organization}>{organization}</h3>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={style.organization}
+        >
+          {organization}
+        </a>
         <span>({period})</span>
       </div>
       <h2 className={style.role}>{role}</h2>
