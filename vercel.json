@@ -1,0 +1,10 @@
+{
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "env": {
+    "VITE_PUBLIC_KEY_EMAILJS": "@vite_public_key_emailjs",
+    "VITE_SERVICE_ID_EMAILJS": "@vite_service_id_emailjs",
+    "VITE_TEMPLATE_ID_EMAILJS": "@vite_template_id_emailjs"
+  }
+}
