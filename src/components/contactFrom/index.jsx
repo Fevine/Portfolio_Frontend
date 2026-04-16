@@ -17,6 +17,9 @@ function ContactForm() {
   const serviceId = import.meta.env.VITE_SERVICE_ID_EMAILJS;
   const templateId = import.meta.env.VITE_TEMPLATE_ID_EMAILJS;
 
+  console.log('Test var:', import.meta.env.VITE_TEST_VAR);
+  console.log('All env vars:', import.meta.env);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setMessageData(prev => ({
