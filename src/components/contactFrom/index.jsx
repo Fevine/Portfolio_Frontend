@@ -13,6 +13,10 @@ function ContactForm() {
   const [isSending, setIsSending] = React.useState(false);
   const [feedback, setFeedback] = React.useState({ type: '', message: '' });
 
+  const apiKey = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;
+  const serviceId = import.meta.env.VITE_SERVICE_ID_EMAILJS;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID_EMAILJS;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setMessageData(prev => ({
@@ -29,8 +33,8 @@ function ContactForm() {
     try {
       // Replace with your EmailJS credentials
       const result = await emailjs.send(
-        process.env.VITE_SERVICE_ID_EMAILJS,
-        process.env.VITE_TEMPLATE_ID_EMAILJS,
+        serviceId,
+        templateId,
         {
           from_name: MessageData.name,
           from_email: MessageData.email,
@@ -38,7 +42,7 @@ function ContactForm() {
           message: MessageData.message,
           to_email: 'mammadtaghialiyev@gmail.com'
         },
-        process.env.VITE_PUBLIC_KEY_EMAILJS
+        apiKey,
       );
 
       setFeedback({ type: 'success', message: 'Message sent successfully! I\'ll get back to you soon.' });
