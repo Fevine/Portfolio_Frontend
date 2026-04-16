@@ -29,8 +29,8 @@ function ContactForm() {
     try {
       // Replace with your EmailJS credentials
       const result = await emailjs.send(
-        process.env.SERVICE_ID_EMAILJS,
-        process.env.TEMPLATE_ID_EMAILJS,
+        process.env.VITE_SERVICE_ID_EMAILJS,
+        process.env.VITE_TEMPLATE_ID_EMAILJS,
         {
           from_name: MessageData.name,
           from_email: MessageData.email,
@@ -38,7 +38,7 @@ function ContactForm() {
           message: MessageData.message,
           to_email: 'mammadtaghialiyev@gmail.com'
         },
-        process.env.PUBLIC_KEY_EMAILJS
+        process.env.VITE_PUBLIC_KEY_EMAILJS
       );
 
       setFeedback({ type: 'success', message: 'Message sent successfully! I\'ll get back to you soon.' });
