@@ -125,3 +125,5 @@ function ContactForm() {
 }
 
 export default ContactForm;
+
+// Note: Ensure you have the correct EmailJS credentials in your .env file and that they are properly loaded in your Vite configuration.
