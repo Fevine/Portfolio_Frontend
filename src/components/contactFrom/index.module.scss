@@ -5,6 +5,7 @@
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
+  background-color: #313131;
 
   .name {
     grid-area: 1 / 1 / 2 / 2;
