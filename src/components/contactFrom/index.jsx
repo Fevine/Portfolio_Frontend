@@ -19,6 +19,7 @@ function ContactForm() {
 
   console.log('Test var:', import.meta.env.VITE_TEST_VAR);
   console.log('All env vars:', import.meta.env);
+  console.log('Testing Log');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
