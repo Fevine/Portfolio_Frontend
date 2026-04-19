@@ -34,6 +34,10 @@ function ContactForm() {
     setFeedback({ type: '', message: '' });
 
     try {
+      if (!apiKey) {
+        console.error("Public key missing!");
+        return;
+      }
       // Replace with your EmailJS credentials
       const result = await emailjs.send(
         serviceId,
